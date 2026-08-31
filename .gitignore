@@ -1,0 +1,9 @@
+.graymatter
+.code-review-graph
+.venv
+.pytest_cache
+docs
+work
+.ruff_cache
+.mypy_cache
+__pycache__/
