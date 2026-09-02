@@ -1,0 +1,46 @@
+name: Feature request
+description: Propose an improvement by explaining the problem and desired outcome
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the need before prescribing an implementation.
+        Do not disclose vulnerabilities here; follow the [security policy](https://github.com/MrKaushik7/agent-semantic-cache/security/policy) instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: Who is affected, and what can they not do safely or effectively today?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe observable behavior and how we would know the request is satisfied.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note current workarounds or smaller approaches you considered.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add relevant examples, constraints, or links without sensitive information.
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I searched existing issues for the same request.
+          required: true
+        - label: I agree to follow the repository Code of Conduct.
+          required: true
