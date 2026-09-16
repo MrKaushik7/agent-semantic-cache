@@ -7,8 +7,8 @@ The human writes core implementation; agents default to teaching, questioning, a
 
 | Task | Read first | Then read |
 |---|---|---|
-| Understand the project | `CONTEXT.md` | Relevant section of `plan.md` |
-| Start an issue | `work/CONTEXT.md` | Relevant roadmap entry and template |
+| Understand the project | `CONTEXT.md` | Relevant GitHub issue and architecture document |
+| Start an issue | `work/CONTEXT.md` | Relevant GitHub issue and template |
 | Continue an issue | `work/active/<issue>/notes.md` | Issue, relevant code, and tests |
 | Review understanding | Active issue `notes.md` | Issue acceptance and primary references |
 | Review implementation | Active issue `notes.md` | Diff, interface, and acceptance tests |
@@ -18,8 +18,8 @@ The human writes core implementation; agents default to teaching, questioning, a
 ## Working rules
 
 - Keep one active issue at a time.
-- Treat `plan.md` as read-only roadmap input. Edit or include it in an issue commit only when the user explicitly requests a roadmap change.
-- Do not copy the full roadmap into work folders; link to the GitHub issue and `plan.md`.
+- Treat a local root `plan.md`, when present, as optional untracked planning material. Never require or commit it.
+- Keep public roadmap and acceptance criteria in GitHub Issues and the GitHub Project; link to the issue from work records.
 - Learn by doing: write enough in `notes.md` to attempt the issue safely, get a review, then implement.
 - Use a separate design or ADR only for cross-cutting, risky, or hard-to-reverse decisions.
 - Append verification and lessons to the same `notes.md` after implementation.
@@ -32,8 +32,8 @@ The human writes core implementation; agents default to teaching, questioning, a
 
 ## Sources of truth
 
-- Roadmap and acceptance criteria: `plan.md`
+- Roadmap and acceptance criteria: GitHub Issues and GitHub Project
 - Current understanding and evidence: active issue `notes.md`
 - Runtime behavior: code and tests
 - Durable decisions and learning: `docs/`
-- Public scheduling: GitHub Issues and GitHub Project after repository initialization
+- Public scheduling: GitHub Project
